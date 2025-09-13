@@ -56,7 +56,7 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;   /* ensures no weird stretching */
-  object-position: center center; /* you can adjust focus area */
+  object-position: center 30%; /* you can adjust focus area */
   display: block;
 }
 .profile-info {
