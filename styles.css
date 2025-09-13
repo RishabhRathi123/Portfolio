@@ -14,7 +14,10 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: #0f172a; /* UPDATED: New, more vibrant navy background */
+  /* UPDATED: Restored the dynamic gradient to serve as the base layer */
+  background-color: #0f172a;
+  background-image: radial-gradient(at 19% 95%, hsla(196, 75%, 25%, 0.25) 0px, transparent 50%), 
+                    radial-gradient(at 75% 15%, hsla(207, 44%, 14%, 0.5) 0px, transparent 50%);
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -62,11 +65,11 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 
 .hero-card {
-  background: rgba(30, 41, 59, 0.5); /* UPDATED: Lighter glass effect */
+  background: rgba(30, 41, 59, 0.5); 
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: Brighter border */
+  border: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .profile-info {padding: 16px 20px;text-align: center;}
@@ -92,11 +95,15 @@ body{
 .section {
   padding: 48px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0f172a; /* Matches new body background */
+  /* UPDATED: Default sections are now transparent to reveal the body background */
+  background: transparent;
 }
 
 .section.light {
-  background: var(--surface); /* Uses the new, lighter --surface color */
+  /* UPDATED: "light" sections now have a beautiful glass effect */
+  background-color: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 h2{margin-top:0;font-size:1.4rem}
@@ -148,3 +155,5 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
+
