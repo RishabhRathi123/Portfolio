@@ -174,8 +174,10 @@ h2{margin-top:0;font-size:1.4rem}
 @media (max-width:960px){
   .hero {
     background-attachment: scroll; /* Disables parallax on mobile for proper display */
-    background-size: cover;      /* Ensures the whole image is visible */
+    background-size: cover;      /* Ensures the image covers the whole section */
     background-repeat: no-repeat;  /* Prevents the image from tiling */
+    min-height: auto; /* Let the content define the height */
+    padding: 80px 0; /* Add generous padding to fill the screen */
   }
   .hero-grid{grid-template-columns:1fr;gap:18px}
   .about-grid{grid-template-columns:1fr}
