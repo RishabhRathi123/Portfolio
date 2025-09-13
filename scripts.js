@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Instead of sending to backend, prepare mailto link to open user's mail client:
     const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:22ucs166@lnmiit.ac.in?subject=${subject}&body=${body}`;
+    // UPDATED: Corrected the email address to your preferred one.
+    window.location.href = `mailto:rishabhrathi1512@gmail.com?subject=${subject}&body=${body}`;
     msg.textContent = 'Opening your mail client...';
     setTimeout(() => { msg.textContent = ''; form.reset(); }, 2000);
   });
