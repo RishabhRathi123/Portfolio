@@ -37,17 +37,16 @@ body{
 /* Hero */
 .hero {
   /* UPDATED: Increased padding and set a minimum height */
-  padding: 100px 0;
-  min-height: 85vh;
+  padding: 80px 0;
+  min-height: 60vh;
   display: flex; /* Added for vertical alignment */
   align-items: center; /* Added for vertical alignment */
 
-  background-color: #081328; /* ADDED: Fills the empty space on the sides */
   background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
-  background-size: contain; /* UPDATED: Ensures the entire image is visible */
+  background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; /* ADDED: Prevents the image from tiling */
-  /* UPDATED: Removed parallax as it can interfere with 'contain' */
+  /* UPDATED: Added parallax effect */
+  background-attachment: fixed;
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -148,7 +147,3 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
-
-
-
-
