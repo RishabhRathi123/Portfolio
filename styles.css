@@ -1,9 +1,9 @@
 :root{
   --bg: #0f1724;
   --card: #0f1724;
-  --muted: #94a3b8; /* UPDATED: Lighter for better contrast */
+  --muted: #7b8794;
   --accent: #06b6d4;
-  --surface: #1e293b; /* UPDATED: New lighter section color */
+  --surface: #0b1220;
   --white: #f8fafc;
   --glass: rgba(255,255,255,0.03);
   --container: 1100px;
@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: #0f172a; /* UPDATED: New, cleaner base background */
+  background: #111827; /* UPDATED: A slightly lighter, more modern navy */
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -25,7 +25,7 @@ body{
 .container{max-width:var(--container);margin:0 auto;padding:28px}
 
 /* Header */
-.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(15,23,42,0.8), rgba(15,23,42,0.6));backdrop-filter: blur(8px);z-index:30;border-bottom:1px solid rgba(255,255,255,0.08)}
+.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(6,6,10,0.8), rgba(6,6,10,0.4));backdrop-filter: blur(8px);z-index:30;border-bottom:1px solid rgba(255,255,255,0.05)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand a{font-weight:700;color:var(--white);text-decoration:none;font-size:1.05rem}
 .nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600; transition: color 0.2s ease;}
@@ -36,17 +36,18 @@ body{
 
 /* Hero */
 .hero {
-  min-height: 100vh;
+  /* This combination creates the professional, full-bleed look */
+  min-height: 100vh; /* UPDATED: Changed from 90vh */
   display: flex;
   align-items: center;
   
-  background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('profile.png');
-  background-size: cover;
-  background-position: center 35%;
-  background-attachment: fixed;
+  background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
+  background-size: cover; /* Fills the entire section */
+  background-position: center 35%; /* UPDATED: Moves the image down */
+  background-attachment: fixed; /* Adds a subtle parallax scroll effect */
   
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hero-grid {
@@ -62,11 +63,11 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 
 .hero-card {
-  background: rgba(30, 41, 59, 0.5); /* UPDATED: Matches new light section color */
+  background: rgba(17, 24, 39, 0.5); /* UPDATED: Lighter glass effect */
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.1); /* UPDATED: Brighter border */
+  border: 1px solid rgba(255, 255, 255, 0.08); /* UPDATED: Brighter border */
 }
 
 .profile-info {padding: 16px 20px;text-align: center;}
@@ -74,15 +75,15 @@ body{
 .profile-info .muted {font-size: 0.95rem;}
 
 .quick-stats{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
-.quick-stats div{background:rgba(255,255,255,0.05);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06)}
+.quick-stats div{background:var(--glass);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
 .mini-skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.mini-skills span{background:rgba(255,255,255,0.05);padding:6px 8px;border-radius:8px;font-size:0.85rem}
+.mini-skills span{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:0.85rem}
 
 /* Buttons */
 .btn{display:inline-block;background:var(--accent);color:#042;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700; transition: transform 0.2s ease;}
 .btn:hover{transform: scale(1.05);}
 .btn.small{padding:8px 10px;font-size:0.9rem}
-.btn.outline, .btn.outline:visited{background:transparent;border:1px solid rgba(255,255,255,0.1);color:var(--white)}
+.btn.outline, .btn.outline:visited{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
 .hero-ctas{margin-top:12px;display:flex;gap:12px;align-items:center}
 .social{display:flex;gap:12px;padding:0;margin-top:14px;list-style:none}
 .social a{color:var(--muted);text-decoration:none;font-size:1.1rem; transition: color 0.2s ease;}
@@ -91,27 +92,27 @@ body{
 /* Sections */
 .section {
   padding: 48px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0f172a; /* Matches new body background */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #071021;
 }
 
 .section.light {
-  background: var(--surface); /* Uses new, lighter --surface color */
+  background: var(--surface);
 }
 
 h2{margin-top:0;font-size:1.4rem}
 .about-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
 .personal-meta ul{list-style:none;padding:0;margin:0}
-.personal-meta li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.04);color:var(--muted)}
+.personal-meta li{padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
 
 /* Skills */
 .skill-categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:14px}
-.skill-card{background:rgba(255,255,255,0.03);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.05)}
+.skill-card{background:rgba(255,255,255,0.02);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
 .skill-badges{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
-.skill-badges span{background:rgba(255,255,255,0.04);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
+.skill-badges span{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
 
 /* Projects */
-.project{background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.06)}
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.04)}
 .project-header{display:flex;justify-content:space-between;align-items:center}
 .project-meta{color:var(--muted);font-size:0.9rem}
 .project-body p{margin:10px 0}
@@ -120,7 +121,7 @@ h2{margin-top:0;font-size:1.4rem}
 
 /* Timeline */
 .timeline{margin-top:12px}
-.timeline-item{display:flex;gap:18px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,0.04)}
+.timeline-item{display:flex;gap:18px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
 .timeline-item .time{min-width:120px;color:var(--muted);font-weight:700}
 .bulleted{padding-left:18px}
 
@@ -129,13 +130,13 @@ h2{margin-top:0;font-size:1.4rem}
 .contact-info{list-style:none;padding:0;margin:12px 0}
 .contact-info li{margin:8px 0;color:var(--muted)}
 .contact-form label{display:block;margin-bottom:12px}
-.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);color:var(--white)}
+.contact-form input, .contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.05);background:rgba(255,255,255,0.02);color:var(--white)}
 .form-actions{display:flex;gap:12px;align-items:center;margin-top:8px}
 .muted{color:var(--muted)}
 .small{font-size:0.85rem}
 
 /* Footer */
-.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--muted);font-size:0.95rem}
+.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.05);text-align:center;color:var(--muted);font-size:0.95rem}
 
 /* Responsive */
 @media (max-width:960px){
