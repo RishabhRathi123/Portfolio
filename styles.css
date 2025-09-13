@@ -37,7 +37,7 @@ body{
 /* Hero */
 .hero {
   /* This combination creates the professional, full-bleed look */
-  min-height: 90vh; /* UPDATED: Increased from 80vh */
+  min-height: 100vh; /* UPDATED: Changed from 90vh */
   display: flex;
   align-items: center;
   
@@ -146,6 +146,7 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
 
 
