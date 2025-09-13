@@ -43,10 +43,10 @@ body{
   align-items: center; /* Added for vertical alignment */
 
   background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
-  background-size: cover;
+  background-size: contain; /* UPDATED: Ensures the entire image is visible */
   background-position: center center;
-  /* UPDATED: Added parallax effect */
-  background-attachment: fixed;
+  background-repeat: no-repeat; /* ADDED: Prevents the image from tiling */
+  /* UPDATED: Removed parallax as it can interfere with 'contain' */
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -147,4 +147,5 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
