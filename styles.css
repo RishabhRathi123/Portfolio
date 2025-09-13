@@ -14,7 +14,10 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: #0f172a; /* UPDATED: New, more vibrant navy background */
+  /* UPDATED: Replaced solid color with a subtle dot grid pattern */
+  background-color: #0f172a;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+  background-size: 20px 20px;
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -92,11 +95,13 @@ body{
 .section {
   padding: 48px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0f172a; /* Matches new body background */
+  /* The default section will now use the body's background pattern */
+  background: transparent;
 }
 
 .section.light {
-  background: var(--surface); /* Uses the new, lighter --surface color */
+  /* UPDATED: The light section gets its own background color, on top of the pattern */
+  background-color: var(--surface);
 }
 
 h2{margin-top:0;font-size:1.4rem}
