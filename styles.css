@@ -14,10 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  /* UPDATED: Replaced pattern with a dynamic, multi-point radial gradient for a modern look */
-  background-color: #0f172a;
-  background-image: radial-gradient(at 19% 95%, hsla(196, 75%, 25%, 0.25) 0px, transparent 50%), 
-                    radial-gradient(at 75% 15%, hsla(207, 44%, 14%, 0.5) 0px, transparent 50%);
+  background: #0f172a; /* UPDATED: New, more vibrant navy background */
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -95,13 +92,11 @@ body{
 .section {
   padding: 48px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  /* The default section will now use the body's background gradient */
-  background: transparent;
+  background: #0f172a; /* Matches new body background */
 }
 
 .section.light {
-  /* UPDATED: This creates a semi-transparent overlay, letting the gradient show through */
-  background-color: rgba(30, 41, 59, 0.5);
+  background: var(--surface); /* Uses the new, lighter --surface color */
 }
 
 h2{margin-top:0;font-size:1.4rem}
@@ -153,4 +148,3 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
-
