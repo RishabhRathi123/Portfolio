@@ -33,66 +33,30 @@ body{
 #mobile-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.2rem}
 
 /* Hero */
-/* Hero */
 .hero {
   padding: 56px 0;
+  /* UPDATED: Added background image with a dark overlay */
+  background-image: linear-gradient(rgba(15, 23, 36, 0.8), rgba(15, 23, 36, 0.8)), url('profile.png');
+  background-size: cover;
+  background-position: center 25%;
+  position: relative;
 }
 
 .hero-grid {
   display: grid;
-  /* FIX: Makes the right column responsive to prevent overflow */
+  /* UPDATED: Prevents overflow on smaller screens */
   grid-template-columns: 1fr minmax(0, 340px);
   gap: 28px;
-  /* FIX: Vertically centers both columns for a balanced look */
-  align-items: center; 
+  /* UPDATED: Centers columns vertically for a balanced look */
+  align-items: center;
 }
 
-.hero-text h1 {
-  font-size: 2.2rem;
-  margin: 0 0 8px;
-  font-weight: 800;
-}
+.hero-text h1{font-size:2.2rem;margin:0 0 8px;font-weight:800}
+.hero-text .accent{color:var(--accent)}
+.lead{color:var(--muted);margin:6px 0 16px}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 
-.hero-text .accent {
-  color: var(--accent);
-}
-
-.lead {
-  color: var(--muted);
-  margin: 6px 0 16px;
-}
-
-.hero-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-  border-radius: 12px;
-  padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-.hero-image {
-  width: 100%;
-  /* FIX: Replaced fixed height with aspect-ratio for a responsive square image */
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-.hero-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 25%;
-  /* FIX: Removed transform to make the image fill its container */
-  display: block;
-}
+/* REMOVED: .hero-image, .hero-image::after, and .hero-image img are no longer needed */
 
 .profile-info {
   padding: 16px 20px;
@@ -109,14 +73,8 @@ body{
   font-size: 0.95rem;
 }
 
-.profile {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.avatar {
+.profile{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.avatar{
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -125,42 +83,17 @@ body{
   align-items: center;
   justify-content: center;
   margin-bottom: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255,255,255,0.1);
 }
-
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
-.quick-stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.quick-stats div {
-  background: var(--glass);
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.02);
-}
-
-.mini-skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
-}
-
-.mini-skills span {
-  background: rgba(255, 255, 255, 0.03);
-  padding: 6px 8px;
-  border-radius: 8px;
-  font-size: 0.85rem;
-}
+.quick-stats{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+.quick-stats div{background:var(--glass);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.mini-skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mini-skills span{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:0.85rem}
 
 /* Buttons */
 .btn{display:inline-block;background:var(--accent);color:#042;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
