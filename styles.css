@@ -37,8 +37,8 @@ body{
 /* Hero */
 .hero {
   /* UPDATED: Increased padding and set a minimum height */
-  padding: 80px 0;
-  min-height: 60vh;
+  padding: 100px 0;
+  min-height: 85vh;
   display: flex; /* Added for vertical alignment */
   align-items: center; /* Added for vertical alignment */
 
@@ -147,5 +147,6 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
 
