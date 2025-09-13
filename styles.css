@@ -43,7 +43,7 @@ body{
   display: flex;
   align-items: center;
   
-  background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('profile.png');
+  background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('profile.png');
   background-size: cover;
   background-position: center 35%;
   background-attachment: fixed;
@@ -171,4 +171,5 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
