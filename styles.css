@@ -35,7 +35,6 @@ body{
 /* Hero */
 .hero {
   padding: 56px 0;
-  /* UPDATED: Added background image with a dark overlay */
   background-image: linear-gradient(rgba(15, 23, 36, 0.8), rgba(15, 23, 36, 0.8)), url('profile.png');
   background-size: cover;
   background-position: center 25%;
@@ -44,10 +43,8 @@ body{
 
 .hero-grid {
   display: grid;
-  /* UPDATED: Prevents overflow on smaller screens */
   grid-template-columns: 1fr minmax(0, 340px);
   gap: 28px;
-  /* UPDATED: Centers columns vertically for a balanced look */
   align-items: center;
 }
 
@@ -55,8 +52,6 @@ body{
 .hero-text .accent{color:var(--accent)}
 .lead{color:var(--muted);margin:6px 0 16px}
 .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
-
-/* REMOVED: .hero-image, .hero-image::after, and .hero-image img are no longer needed */
 
 .profile-info {
   padding: 16px 20px;
@@ -104,8 +99,17 @@ body{
 .social a{color:var(--muted);text-decoration:none;font-size:1.1rem}
 
 /* Sections */
-.section{padding:48px 0}
-.section.light{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border-top:1px solid rgba(255,255,255,0.02)}
+/* UPDATED: Added a consistent top border to all sections for clear separation */
+.section {
+  padding: 48px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+/* UPDATED: Made the background color for .light sections more distinct */
+.section.light {
+  background: var(--surface);
+}
+
 h2{margin-top:0;font-size:1.4rem}
 .about-grid{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start}
 .personal-meta ul{list-style:none;padding:0;margin:0}
@@ -152,3 +156,4 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
