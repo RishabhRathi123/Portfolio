@@ -36,17 +36,23 @@ body{
 
 /* Hero */
 .hero {
-  padding: 56px 0;
+  /* UPDATED: Increased padding and set a minimum height */
+  padding: 80px 0;
+  min-height: 60vh;
+  display: flex; /* Added for vertical alignment */
+  align-items: center; /* Added for vertical alignment */
+
   background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
   background-size: cover;
-  /* UPDATED: Centers your image perfectly in the frame */
   background-position: center center;
+  /* UPDATED: Added parallax effect */
+  background-attachment: fixed;
   position: relative;
-  /* UPDATED: Adds a bottom border to frame the section */
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hero-grid {
+  width: 100%; /* Ensures grid takes full width inside the flex container */
   display: grid;
   grid-template-columns: 1fr minmax(0, 340px);
   gap: 28px;
@@ -57,9 +63,8 @@ body{
 .hero-text .accent{color:var(--accent)}
 .lead{color:var(--muted);margin:6px 0 16px}
 
-/* UPDATED: Improved the card's look for better readability */
 .hero-card {
-  background: rgba(11, 18, 32, 0.6); /* Glass effect */
+  background: rgba(11, 18, 32, 0.6);
   backdrop-filter: blur(8px);
   border-radius: 12px;
   padding: 18px;
@@ -86,15 +91,14 @@ body{
 .social a:hover{color: var(--white);}
 
 /* Sections */
-/* UPDATED: Creates a clean, framed look for every section */
 .section {
   padding: 48px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  background: #071021; /* Dark background for default sections */
+  background: #071021;
 }
 
 .section.light {
-  background: var(--surface); /* Lighter background for light sections */
+  background: var(--surface);
 }
 
 h2{margin-top:0;font-size:1.4rem}
