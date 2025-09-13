@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: #081328;
+  background: #111827; /* UPDATED: A slightly lighter, more modern navy */
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -63,11 +63,11 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 
 .hero-card {
-  background: rgba(11, 18, 32, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(17, 24, 39, 0.5); /* UPDATED: Lighter glass effect */
+  backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* UPDATED: Brighter border */
 }
 
 .profile-info {padding: 16px 20px;text-align: center;}
@@ -146,6 +146,7 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
 
 
