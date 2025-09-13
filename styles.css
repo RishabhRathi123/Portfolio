@@ -44,6 +44,13 @@ body{
   height: 250px; /* adjust to make image taller or shorter */
   overflow: hidden;
   border-bottom: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+}
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4));
 }
 .hero-image img {
   width: 100%;
