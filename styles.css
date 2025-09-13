@@ -48,7 +48,7 @@ body{
   background-attachment: fixed;
   
   position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* UPDATED: Removed the rigid bottom border */
 }
 
 .hero-grid {
@@ -92,8 +92,8 @@ body{
 
 /* Sections */
 .section {
-  padding: 48px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 64px 0; /* UPDATED: Increased padding for more breathing room */
+  /* UPDATED: Removed the rigid bottom border */
   background: transparent;
 }
 
@@ -154,7 +154,13 @@ h2{margin-top:0;font-size:1.4rem}
 .small{font-size:0.85rem}
 
 /* Footer */
-.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.08);text-align:center;color:var(--muted);font-size:0.95rem}
+.site-footer{
+  padding:20px 0;
+  /* UPDATED: Removed the rigid top border */
+  text-align:center;
+  color:var(--muted);
+  font-size:0.95rem
+}
 
 /* Responsive */
 @media (max-width:960px){
@@ -169,4 +175,5 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
