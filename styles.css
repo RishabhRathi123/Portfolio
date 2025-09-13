@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: #111827; /* UPDATED: A slightly lighter, more modern navy */
+  background: #081328;
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -36,15 +36,14 @@ body{
 
 /* Hero */
 .hero {
-  /* This combination creates the professional, full-bleed look */
-  min-height: 100vh; /* UPDATED: Changed from 90vh */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   
   background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
-  background-size: cover; /* Fills the entire section */
-  background-position: center 35%; /* UPDATED: Moves the image down */
-  background-attachment: fixed; /* Adds a subtle parallax scroll effect */
+  background-size: cover;
+  background-position: center 35%;
+  background-attachment: fixed;
   
   position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -63,11 +62,11 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 
 .hero-card {
-  background: rgba(17, 24, 39, 0.5); /* UPDATED: Lighter glass effect */
+  background: rgba(11, 18, 32, 0.6);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.08); /* UPDATED: Brighter border */
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .profile-info {padding: 16px 20px;text-align: center;}
@@ -140,9 +139,13 @@ h2{margin-top:0;font-size:1.4rem}
 
 /* Responsive */
 @media (max-width:960px){
+  .hero {
+    background-attachment: scroll; /* Disables parallax on mobile for proper display */
+  }
   .hero-grid{grid-template-columns:1fr;gap:18px}
   .about-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
