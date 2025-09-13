@@ -43,7 +43,7 @@ body{
   display: flex;
   align-items: center;
   
-  background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('profile.png');
+  background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('profile.png');
   background-size: cover;
   background-position: center 35%;
   background-attachment: fixed;
