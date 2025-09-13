@@ -41,7 +41,7 @@ body{
 .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 .hero-image {
   width: 100%;
-  aspect-ratio: 1 / 1; /* adjust to make image taller or shorter */
+  height: 300px; /* adjust to make image taller or shorter */
   overflow: hidden;
   border-bottom: 1px solid rgba(255,255,255,0.1);
   position: relative;
@@ -57,6 +57,7 @@ body{
   height: 100%;
   object-fit: cover;   /* ensures no weird stretching */
   object-position: center 25%; /* you can adjust focus area */
+  transform: scale(0.95);
   display: block;
 }
 .profile-info {
