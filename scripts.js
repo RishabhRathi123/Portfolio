@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Contact form (simple client-side simulation)
+  // Contact form behavior
   const form = document.getElementById('contact-form');
   const msg = document.getElementById('form-msg');
   form.addEventListener('submit', function (e) {
@@ -44,15 +44,32 @@ document.addEventListener('DOMContentLoaded', function () {
       msg.textContent = 'Please fill all fields.';
       return;
     }
-    // Instead of sending to backend, prepare mailto link to open user's mail client:
+    
+    // Prepare mailto link details
     const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    // UPDATED: Corrected the email address to your preferred one.
-    window.location.href = `mailto:rishabhrathi1512@gmail.com?subject=${subject}&body=${body}`;
+    const body = encodeURIComponent(`Name: ${name}\nFrom Email: ${email}\n\nMessage:\n${message}`);
+    const mailtoLink = `mailto:rishabhrathi1512@gmail.com?subject=${subject}&body=${body}`;
+
+    // UPDATED: Use a more robust method to open the mail client
+    const tempLink = document.createElement('a');
+    tempLink.href = mailtoLink;
+    // Hide the link
+    tempLink.style.display = 'none';
+    // Append the link to the body
+    document.body.appendChild(tempLink);
+    // Programmatically click the link
+    tempLink.click();
+    // Remove the link from the body
+    document.body.removeChild(tempLink);
+
     msg.textContent = 'Opening your mail client...';
-    setTimeout(() => { msg.textContent = ''; form.reset(); }, 2000);
+    setTimeout(() => { 
+        msg.textContent = ''; 
+        form.reset(); 
+    }, 3000);
   });
 
   // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 });
+
