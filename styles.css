@@ -14,7 +14,7 @@
 html,body{height:100%}
 body{
   margin:0;
-  background: linear-gradient(180deg,#071021 0%, #081328 100%);
+  background: #081328;
   color:var(--white);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -25,23 +25,33 @@ body{
 .container{max-width:var(--container);margin:0 auto;padding:28px}
 
 /* Header */
-.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(6,6,10,0.6), rgba(6,6,10,0.2));backdrop-filter: blur(6px);z-index:30;border-bottom:1px solid rgba(255,255,255,0.03)}
+.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(6,6,10,0.8), rgba(6,6,10,0.4));backdrop-filter: blur(8px);z-index:30;border-bottom:1px solid rgba(255,255,255,0.05)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand a{font-weight:700;color:var(--white);text-decoration:none;font-size:1.05rem}
-.nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600}
-.nav a.cta{background:var(--accent);padding:8px 12px;border-radius:8px;color:#042; margin-left:20px}
+.nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600; transition: color 0.2s ease;}
+.nav a:hover{color:var(--white);}
+.nav a.cta{background:var(--accent);padding:8px 12px;border-radius:8px;color:#042; margin-left:20px; transition: transform 0.2s ease;}
+.nav a.cta:hover {transform: scale(1.05);}
 #mobile-toggle{display:none;background:none;border:0;color:var(--muted);font-size:1.2rem}
 
 /* Hero */
 .hero {
-  padding: 56px 0;
-  background-image: linear-gradient(rgba(15, 23, 36, 0.8), rgba(15, 23, 36, 0.8)), url('profile.png');
-  background-size: cover;
-  background-position: center 25%;
+  /* This combination creates the professional, full-bleed look */
+  min-height: 80vh; /* Makes the section taller to frame you better */
+  display: flex;
+  align-items: center;
+  
+  background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
+  background-size: cover; /* Fills the entire section */
+  background-position: center 35%; /* UPDATED: Moves the image down */
+  background-attachment: fixed; /* Adds a subtle parallax scroll effect */
+  
   position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .hero-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr minmax(0, 340px);
   gap: 28px;
@@ -51,61 +61,41 @@ body{
 .hero-text h1{font-size:2.2rem;margin:0 0 8px;font-weight:800}
 .hero-text .accent{color:var(--accent)}
 .lead{color:var(--muted);margin:6px 0 16px}
-.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 
-.profile-info {
-  padding: 16px 20px;
-  text-align: center;
-}
-
-.profile-info h3 {
-  margin: 10px 0 4px;
-  font-size: 1.4rem;
-  font-weight: 700;
+.hero-card {
+  background: rgba(11, 18, 32, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.profile-info .muted {
-  font-size: 0.95rem;
-}
+.profile-info {padding: 16px 20px;text-align: center;}
+.profile-info h3 {margin: 10px 0 4px;font-size: 1.4rem;font-weight: 700;}
+.profile-info .muted {font-size: 0.95rem;}
 
-.profile{display:flex;gap:12px;align-items:center;margin-bottom:10px}
-.avatar{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  border: 2px solid rgba(255,255,255,0.1);
-}
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .quick-stats{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
-.quick-stats div{background:var(--glass);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+.quick-stats div{background:var(--glass);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)}
 .mini-skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .mini-skills span{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:0.85rem}
 
 /* Buttons */
-.btn{display:inline-block;background:var(--accent);color:#042;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn{display:inline-block;background:var(--accent);color:#042;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700; transition: transform 0.2s ease;}
+.btn:hover{transform: scale(1.05);}
 .btn.small{padding:8px 10px;font-size:0.9rem}
 .btn.outline, .btn.outline:visited{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--white)}
 .hero-ctas{margin-top:12px;display:flex;gap:12px;align-items:center}
 .social{display:flex;gap:12px;padding:0;margin-top:14px;list-style:none}
-.social a{color:var(--muted);text-decoration:none;font-size:1.1rem}
+.social a{color:var(--muted);text-decoration:none;font-size:1.1rem; transition: color 0.2s ease;}
+.social a:hover{color: var(--white);}
 
 /* Sections */
-/* UPDATED: Added a consistent top border to all sections for clear separation */
 .section {
   padding: 48px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: #071021;
 }
 
-/* UPDATED: Made the background color for .light sections more distinct */
 .section.light {
   background: var(--surface);
 }
@@ -122,7 +112,7 @@ h2{margin-top:0;font-size:1.4rem}
 .skill-badges span{background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:999px;font-weight:600;color:var(--muted)}
 
 /* Projects */
-.project{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005)); padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.02)}
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;margin-bottom:16px;border:1px solid rgba(255,255,255,0.04)}
 .project-header{display:flex;justify-content:space-between;align-items:center}
 .project-meta{color:var(--muted);font-size:0.9rem}
 .project-body p{margin:10px 0}
@@ -146,7 +136,7 @@ h2{margin-top:0;font-size:1.4rem}
 .small{font-size:0.85rem}
 
 /* Footer */
-.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted);font-size:0.95rem}
+.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.05);text-align:center;color:var(--muted);font-size:0.95rem}
 
 /* Responsive */
 @media (max-width:960px){
@@ -156,3 +146,5 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
+
