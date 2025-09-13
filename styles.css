@@ -40,12 +40,12 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 .profile{display:flex;gap:12px;align-items:center;margin-bottom:10px}
-.avatar{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042}
+.avatar{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:800;color:#042}
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%; /* matches avatar shape, change to 50% if you want a perfect circle */
+  border-radius: 12px; /* matches avatar shape, change to 50% if you want a perfect circle */
 }
 .quick-stats{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
 .quick-stats div{background:var(--glass);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
