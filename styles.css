@@ -139,6 +139,9 @@ h2{margin-top:0;font-size:1.4rem}
 
 /* Responsive */
 @media (max-width:960px){
+  .hero {
+    background-attachment: scroll; /* Disables parallax on mobile for proper display */
+  }
   .hero-grid{grid-template-columns:1fr;gap:18px}
   .about-grid{grid-template-columns:1fr}
   .contact-grid{grid-template-columns:1fr}
