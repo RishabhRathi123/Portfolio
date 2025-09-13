@@ -42,6 +42,7 @@ body{
   display: flex; /* Added for vertical alignment */
   align-items: center; /* Added for vertical alignment */
 
+  background-color: #081328; /* ADDED: Fills the empty space on the sides */
   background-image: linear-gradient(rgba(15, 23, 36, 0.9), rgba(15, 23, 36, 0.9)), url('profile.png');
   background-size: contain; /* UPDATED: Ensures the entire image is visible */
   background-position: center center;
@@ -147,6 +148,7 @@ h2{margin-top:0;font-size:1.4rem}
   #mobile-toggle{display:inline-block}
   .nav{display:none}
 }
+
 
 
 
