@@ -40,11 +40,18 @@ body{
 .lead{color:var(--muted);margin:6px 0 16px}
 .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03)}
 .hero-image {
-  background: url("./profile.png") center/cover no-repeat;
   width: 100%;
   height: 250px; /* adjust to make image taller or shorter */
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* ensures no weird stretching */
+  object-position: center top; /* you can adjust focus area */
+  display: block;
+}
 .profile-info {
   padding: 16px 20px;
   text-align: center;
