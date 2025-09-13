@@ -172,10 +172,17 @@ h2{margin-top:0;font-size:1.4rem}
 
 /* Responsive */
 @media (max-width:960px){
+  body {
+    background-attachment: scroll; /* FIX: Ensures glass effect works on mobile */
+  }
   .hero {
     background-attachment: scroll; /* Disables parallax on mobile for proper display */
-    background-size: cover;      /* Ensures the whole image is visible */
+    background-size: cover;      /* Ensures the image covers the whole section */
     background-repeat: no-repeat;  /* Prevents the image from tiling */
+    
+    /* UPDATED: This combination provides the best mobile experience */
+    min-height: 95vh; /* Guarantees the section is tall enough */
+    padding: 40px 0; /* Provides spacing, while flexbox handles centering */
   }
   .hero-grid{grid-template-columns:1fr;gap:18px}
   .about-grid{grid-template-columns:1fr}
