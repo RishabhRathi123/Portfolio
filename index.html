@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rishabh Rathi — Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Rishabh Rathi — Backend Developer (Spring Boot, MySQL) & Musician. Portfolio with projects, resume and contact.">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="#hero">Rishabh Rathi</a>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+      <button id="mobile-toggle" aria-label="Toggle menu"><i class="fa fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Hi, I’m <span class="accent">Rishabh Rathi</span></h1>
+        <p class="lead">Software Engineer • Backend Developer • Indian Classical Musician</p>
+        <p>
+          I build scalable backend systems (Spring Boot, MySQL), design reliable APIs, and solve problems using clean code and robust architecture.
+          Outside code, I'm a trained musician and lead music initiatives at LNMIIT.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn outline" href="resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <ul class="social">
+          <li><a href="https://github.com/RishabhRathi123" target="_blank" rel="noopener"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/rishabh-rathi-a45715256/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="mailto:22ucs166@lnmiit.ac.in"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <div class="hero-card">
+        <div class="profile">
+          <div class="avatar">RR</div>
+          <div>
+            <h3>Rishabh Rathi</h3>
+            <p class="muted">B.Tech. - CSE | Backend Engineer</p>
+          </div>
+        </div>
+
+        <div class="quick-stats">
+          <div><strong>Intern @ Paytm</strong><span> May - Jul 2025</span></div>
+          <div><strong>Top 10</strong><span> CoderArmy Hackathon</span></div>
+          <div><strong>President</strong><span> Music Society (LNMIIT)</span></div>
+        </div>
+
+        <div class="mini-skills">
+          <span>Spring Boot</span><span>MySQL</span><span>Docker</span><span>JWT</span><span>System Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section light">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div>
+          <p>
+            I’m a results-oriented Computer Science student and Software Engineer with experience building backend services and APIs using Spring Boot and MySQL. I enjoy solving system-level problems — concurrency, scaling, and clean architecture are my sweet spots. I have interned at Paytm and built production-focused projects with authentication, conflict-free scheduling and microservice-friendly deployments.
+          </p>
+          <p>
+            Outside tech, I’m an Indian classical singer and instrumentalist — I’ve performed at national events and lead the music society at LNMIIT.
+          </p>
+          <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Full Resume (PDF)</a>
+        </div>
+
+        <div class="personal-meta">
+          <ul>
+            <li><strong>Location:</strong> Kishangarh, Rajasthan (India)</li>
+            <li><strong>Email:</strong> <a href="mailto:22ucs166@lnmiit.ac.in">22ucs166@lnmiit.ac.in</a></li>
+            <li><strong>Phone:</strong> +91-7300086947</li>
+            <li><strong>Education:</strong> B.Tech. - CSE, LNMIIT (2022 - 2026)</li>
+            <li><strong>Interests:</strong> Music, System Design, Competitive Programming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="skill-categories">
+        <div class="skill-card">
+          <h4>Backend</h4>
+          <p>Spring Boot • REST APIs • JWT • Microservices • Concurrency</p>
+        </div>
+        <div class="skill-card">
+          <h4>Databases</h4>
+          <p>MySQL • JDBC • JPA / Hibernate • Query Optimization</p>
+        </div>
+        <div class="skill-card">
+          <h4>Programming</h4>
+          <p>Java • C++ • Python • OOP • DSA</p>
+        </div>
+        <div class="skill-card">
+          <h4>Tools & DevOps</h4>
+          <p>Docker • Postman • IntelliJ • Git</p>
+        </div>
+      </div>
+
+      <div class="skill-badges">
+        <span>System Design</span><span>OOP</span><span>DSA</span><span>Team Leadership</span><span>Client Communication</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section light">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <!-- AutoGen Project -->
+      <article class="project">
+        <div class="project-header">
+          <h3>AutoGen-Based LLM-Driven eSports Commentary Generator</h3>
+          <div class="project-meta">Jul 2024 — Dec 2024 · Team Size: 2</div>
+        </div>
+
+        <div class="project-body">
+          <p><strong>Tech:</strong> LLM Fine-Tuning, AutoGen Framework, Hugging Face Trainer, NLP</p>
+
+          <ul>
+            <li>Developed an AI system for <strong>real-time, dynamic eSports commentary</strong>, initially focused on football matches.</li>
+            <li>Fine-tuned <em>Mistral-7B-Instruct</em> on specialized commentary datasets to produce fluent and engaging narratives tailored to in-match events.</li>
+            <li>Implemented event classification and context management to ensure commentary reacts accurately to game state (goals, substitutions, fouls, momentum shifts).</li>
+            <li>Evaluated model quality using BLEU, ROUGE and Perplexity metrics and iteratively improved prompts and dataset quality.</li>
+            <li>Designed integration hooks for game engines and streaming platforms; the system is optimized for low-latency production use and scalable across eSports titles.</li>
+          </ul>
+
+          <p><strong>Outcome:</strong> A modular, scalable commentary engine that enhances viewer engagement and reduces the need for human commentators for repetitive or lower-stakes matches.</p>
+
+          <p class="project-links">
+            <a class="btn small" href="https://github.com/harshit6239/ISDL_Project" target="_blank" rel="noopener"><i class="fa fa-code"></i> View Repo</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Car Rental -->
+      <article class="project">
+        <div class="project-header">
+          <h3>Car Rental Management System</h3>
+          <div class="project-meta">May 2025 — Jul 2025 · Team Size: 2</div>
+        </div>
+        <div class="project-body">
+          <p><strong>Tech:</strong> Spring Boot, MySQL, JWT, Docker</p>
+          <ul>
+            <li>Full-stack platform supporting 100+ users with real-time bookings and conflict-free scheduling.</li>
+            <li>Resolved multiple race conditions and implemented role-based JWT authentication.</li>
+            <li>Dockerized services for consistent deployment.</li>
+          </ul>
+          <p class="project-links"><a class="btn small" href="https://github.com/RishabhRathi123/Car-Rental-System" target="_blank" rel="noopener"><i class="fa fa-code-branch"></i> View Repo</a></p>
+        </div>
+      </article>
+
+      <!-- RideMitra -->
+      <article class="project">
+        <div class="project-header">
+          <h3>RideMitra.tech (Hackathon)</h3>
+          <div class="project-meta">Jun 2025 · Solo · Top 10/200+</div>
+        </div>
+        <div class="project-body">
+          <p><strong>Tech:</strong> C++, System Design</p>
+          <ul>
+            <li>Built modular backend with dynamic ride matching using OOP patterns (Strategy, Factory, Singleton).</li>
+            <li>Improved testability and extensibility; ranked Top 10 at the Coder Army Hackathon.</li>
+          </ul>
+          <p class="project-links"><a class="btn small" href="https://github.com/RishabhRathi123/System-Design-Hackathon_RideMitra.tech" target="_blank" rel="noopener"><i class="fa fa-code"></i> View Repo</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time">May 2025 — Jul 2025</div>
+          <div class="content">
+            <h4>Software Developer Intern — Paytm (Technology)</h4>
+            <p>Engineered backend modules processing 50K+ daily transactions. Improved API performance by 25% via query optimization and collaborated on REST API design and integration.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">Jun 2025</div>
+          <div class="content">
+            <h4>Hackathon: RideMitra.tech</h4>
+            <p>Solo project, Top 10/200+ teams. Focus on system design, OOP & scalable patterns in C++.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-32">Positions of Responsibility & Teaching</h3>
+      <ul class="bulleted">
+        <li>President — Music Society, LNMIIT (organised multiple events; led sponsorship team)</li>
+        <li>Teaching Assistant — Embedded Systems & IoT, AI/ML Labs (Jan 2025 - May 2025)</li>
+        <li>Organised "AIML Workshop" with faculty from IITs; managed logistics for 200+ participants</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="section light">
+    <div class="container">
+      <h2>Achievements</h2>
+      <ul class="stats">
+        <li><strong>JEE Mains:</strong> NTA Score = 97.606 (Rank = 21,731)</li>
+        <li><strong>JEE Advanced:</strong> Rank ≈ 18,000</li>
+        <li><strong>Pandit Chakradhar Dabral Medal</strong> — Best Indian Musician (2020)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container contact-grid">
+      <div>
+        <h2>Contact</h2>
+        <p>Want to collaborate or just say hi? Drop a message and I’ll get back to you.</p>
+
+        <ul class="contact-info">
+          <li><i class="fa fa-envelope"></i> <a href="mailto:22ucs166@lnmiit.ac.in">22ucs166@lnmiit.ac.in</a></li>
+          <li><i class="fa fa-phone"></i> +91-7300086947</li>
+          <li><i class="fa fa-map-marker-alt"></i> Kishangarh, Rajasthan, India</li>
+        </ul>
+
+        <p class="muted">Or reach out on LinkedIn / GitHub — links in the header.</p>
+      </div>
+
+      <div>
+        <form id="contact-form" class="contact-form">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button type="submit" class="btn">Send</button>
+            <button type="reset" class="btn outline">Reset</button>
+          </div>
+          <p id="form-msg" class="muted small"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Rishabh Rathi. Built with ❤️ • <a href="resume.pdf">Resume</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>
